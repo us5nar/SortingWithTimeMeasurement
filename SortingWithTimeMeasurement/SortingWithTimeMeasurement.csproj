@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogWriter\LogWriter.csproj">
+      <Project>{d629ffa5-b8b3-4428-aa6d-472a536dd496}</Project>
+      <Name>LogWriter</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SortingWithTimeMeasurement
+namespace ISorterNameSpace
 {
-    interface ISorter
+    public interface ISorter
     {
         // interface definition
         // interface members:
