@@ -12,7 +12,12 @@ namespace SortingWithTimeMeasurement
         static void Main(string[] args)
         {
             LogWriter logWriter = new LogWriter();
-            logWriter.LogWrite("START!!!");
+            //An exapmple of log writer usage
+            //-----------I want to try it as a static-------------
+            logWriter.Write("START!!!");
+            Console.ReadLine();
+
+
         }
     }
 }

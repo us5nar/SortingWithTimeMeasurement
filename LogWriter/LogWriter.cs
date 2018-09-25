@@ -1,53 +1,27 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LogWriterNameSpace
 {
-    //class LogWriter
-    //{
-    //}
     public class LogWriter
     {
-        private string currenExePath = string.Empty;
-        //public LogWriter(string logMessage)
-        //{
-        //    LogWrite(logMessage);
-        //}
-        public void LogWrite(string logMessage)
-        {
-            currenExePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        //Contains Logfilename with current path
+        private string currenExePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        //Contains formatted day with time
+        private string timeStamp = DateTime.Now.ToString("dd-MM-yyyy|HH:mm:ss|");
+        //Appends log string with DayTime stamp
+        public void Write(string logMessage)           
+        {            
             try
             {
-                using (StreamWriter w = File.AppendText(currenExePath + "\\" + "logFile.log"))
-                {
-                    Log(logMessage, w);
-                }
+                File.AppendAllText(currenExePath + "\\" + "logFile.log", timeStamp + logMessage);
             }
             catch (Exception ex)
             {
             }
         }
 
-        public void Log(string logMessage, TextWriter txtWriter)
-        {
-            try
-            {
-                txtWriter.Write("\r\nLog Entry : ");
-                txtWriter.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(),
-                    DateTime.Now.ToLongDateString());
-                txtWriter.WriteLine("  :");
-                txtWriter.WriteLine("  :{0}", logMessage);
-                txtWriter.WriteLine("-------------------------------");
-            }
-            catch (Exception ex)
-            {
-            }
-        }
     }
 }
 
