@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ArrayGenerator
+namespace ArrayGeneratorSpace
 {
-    class ArrayGenerator
+    public class ArrayGenerator
     {
-        private static Random r = new Random();
+        private static Random randomizer = new Random();
 
-        public static int[] GetRandomArray(int arrySize)
+        public static int[] GetRandomArray(int arraySize)
         {
-            SortedDictionary<double, int> sortedSet = new SortedDictionary<double, int>();
+            int[] arrayToFill = new int[arraySize];
 
-            for (int index = 0; index < arrySize; index++)
+            for (int index = 0; index < arraySize; index++)
             {
-                sortedSet.Add(r.NextDouble(), index);
+                arrayToFill[index] = randomizer.Next();
             }
-            return sortedSet.Select(x => x.Value).ToArray();
+            return arrayToFill;
         }
     }
 }

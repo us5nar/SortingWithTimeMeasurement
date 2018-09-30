@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ArrayGenerator\ArrayGenerator.csproj">
+      <Project>{70048d8d-6831-4329-ab72-eaf1485af16f}</Project>
+      <Name>ArrayGenerator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogWriter\LogWriter.csproj">
       <Project>{d629ffa5-b8b3-4428-aa6d-472a536dd496}</Project>
       <Name>LogWriter</Name>
