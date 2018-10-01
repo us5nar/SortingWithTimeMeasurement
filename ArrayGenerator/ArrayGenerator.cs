@@ -12,7 +12,7 @@ namespace ArrayGeneratorSpace
 
             for (int index = 0; index < arraySize; index++)
             {
-                arrayToFill[index] = randomizer.Next();
+                arrayToFill[index] = randomizer.Next(-1000,1000);
             }
             return arrayToFill;
         }

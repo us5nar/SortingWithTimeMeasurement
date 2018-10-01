@@ -9,14 +9,19 @@ namespace SortingWithTimeMeasurement
     {
         static void Main(string[] args)
         {
-           int[] unsortedArray = ArrayGenerator.GetRandomArray(10);
-                      
-
-
             LogWriter logWriter = new LogWriter();
+            int[] unsortedArray = ArrayGenerator.GetRandomArray(10);
             //An exapmple of log writer usage
             //-----------I want to try it as a static-------------
-            logWriter.Write("START!!!");
+            logWriter.Write("====================!!!START!!!=======================");
+            foreach (int element in unsortedArray)
+            {
+                logWriter.Write(element.ToString());
+            }
+            logWriter.Write("====================!!!STOP!!!=======================");
+
+
+
             Console.ReadLine();
 
 
