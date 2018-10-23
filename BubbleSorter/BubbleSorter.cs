@@ -1,61 +1,37 @@
-﻿using System;
-using ISorterNameSpace;
+﻿using ISorterNameSpace;
 
 namespace BubbleSorterNameSpace
-    {
+{
     public class BubbleSorter : ISorter
     {
-        private int accumulator = new int;
-        private int[] tmpArray = new int[];
-        public int[] Sort(int[] arrayToSort)
-        { return tmpArray[]; }
-        
-        
-        }
-          
-    }
-
+        public int[] Sort(int[] arrayToSort, out int sortingTime)
         {
-            
-            //private static int[] swapElements(int[] inputArray, int indexA, int indexB)
-  
-            //{
-            //    int accumulator = inputArray[indexB];
-            //    inputArray[indexB] = inputArray[indexA];
-            //    inputArray[indexA] = accumulator;
-            //    return inputArray;
-            //}
-   
-            //{
-                bool elementsNotSwapped = true;
-                while (elementsNotSwapped)
-                //Sort untill no sapping is present
+            // Bobble sorting method for interger array
+            bool elementsWereSwapped = true;
+            while (elementsWereSwapped)
+            //Sort untill no sapping is present
+            {
+                elementsWereSwapped = false;
+                int n = 0;
+                //move element up
+                foreach (int element in arrayToSort)
                 {
-                    elementsNotSwapped = false;
-                    int index = 0;
-                    do
+                    if (arrayToSort[n] > arrayToSort[n + 1])
                     {
-                        if (arrayToSort[index] > arrayToSort[index + 1])
-                        {
-                            swapElements(arrayToSort, index + 1, index);
-                            //WriteArray(arrayToSort, "Boubled ==>");
-                            elementsNotSwapped = true;
-                        }
-                        index++;
+                        //swap Elements arrayToSort[n + 1] with arrayToSort[n]
+                        int temp = arrayToSort[n];
+                        arrayToSort[n] = arrayToSort[n + 1];
+                        arrayToSort[n + 1] = temp;
+
+                        elementsWereSwapped = true;
                     }
-                    while (index < arrayToSort.Length - 1);
+                    n++;
                 }
-
             }
-
-            
-
-            //throw new NotImplementedException();
-        }
-
-        //int[] ISorter.Sort(int[] arrayToSort, out int sortingTime)
-        //{
-        //    throw new NotImplementedException();
+            //this time should be calculated
+            sortingTime = 1;
+            return arrayToSort;
         }
     }
 }
+       
