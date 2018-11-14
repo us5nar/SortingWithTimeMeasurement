@@ -1,8 +1,5 @@
-﻿using System;
-using InsertionSorterNaneSpace;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using InsertionSorterNaneSpace;
+using System;
 
 namespace CommonInsertion_Sort
 {
@@ -10,63 +7,25 @@ namespace CommonInsertion_Sort
     {
         static void Main(string[] args)
         {
-            int[] numbers = new int[10] { 2, 5, -4, 11, 0, 18, 22, 67, 51, 6 };
+            int[] numbers = new int[] { 2, 5, -4, 11, 0, 18, 22, 67, 51, 6, 88, -100, 3 };
+            InsertionSorter sorter = new InsertionSorter();
             Console.WriteLine("\nOriginal Array Elements :");
             PrintIntegerArray(numbers);
             Console.WriteLine("\nSorted Array Elements :");
-            PrintIntegerArray(InsertionSort(numbers));
-
-            Console.WriteLine("\nOriginal Array Elements :");
-            PrintIntegerArray(numbers);
-            Console.WriteLine("\nSorted Array Elements :");
-            PrintIntegerArray(InsertionSorter.Sort(numbers));
-
+            PrintIntegerArray(sorter.Sort(numbers, out double timer));
+            Console.WriteLine("\nTme elapsed {0} ms.",timer);
             Console.WriteLine("\nPress ENTER to exit");
             Console.ReadLine();
         }
 
-        static int[] InsertionSort(int[] inputArray)
-        {
-            for (int i = 0; i < inputArray.Length - 1; i++)
-            {
-                for (int j = i + 1; j > 0; j--)
-                {
-                    if (inputArray[j - 1] > inputArray[j])
-                    {
-                        int temp = inputArray[j - 1];
-                        inputArray[j - 1] = inputArray[j];
-                        inputArray[j] = temp;
-                    }
-                }
-            }
-            return inputArray;
-        }
-
-
-       public static int[] InsertionSortByShift(int[] inputArray)
-        {
-            for (int i = 0; i < inputArray.Length - 1; i++)
-            {
-                int j;
-                var insertionValue = inputArray[i];
-                for (j = i; j > 0; j--)
-                {
-                    if (inputArray[j - 1] > insertionValue)
-                    {
-                        inputArray[j] = inputArray[j - 1];
-                    }
-                }
-                inputArray[j] = insertionValue;
-            }
-            return inputArray;
-        } 
-
         public static void PrintIntegerArray(int[] array)
         {
+            Console.Write("[ ");
             foreach (int i in array)
             {
                 Console.Write(i.ToString() + "  ");
             }
+            Console.WriteLine("]");
         }
 
 

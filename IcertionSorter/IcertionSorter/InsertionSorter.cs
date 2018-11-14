@@ -1,28 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ISorterNameSpace;
 
 namespace InsertionSorterNaneSpace
 {
-    class InsertionSorter
+    internal class InsertionSorter:ISorter
     {
-        public static int[] Sort(int[] inputArray)
+         public int[] Sort(int[] arrayToSort, out double sortingTimeMs)
         {
-            for (int i = 0; i < inputArray.Length - 1; i++)
+            // Begin timing.
+            DateTime timeStart = DateTime.Now;
+            for (int i = 0; i < arrayToSort.Length - 1; i++)
             {
                 for (int j = i + 1; j > 0; j--)
                 {
-                    if (inputArray[j - 1] > inputArray[j])
+                    if (arrayToSort[j - 1] > arrayToSort[j])
                     {
-                        int temp = inputArray[j - 1];
-                        inputArray[j - 1] = inputArray[j];
-                        inputArray[j] = temp;
+                        int temp = arrayToSort[j - 1];
+                        arrayToSort[j - 1] = arrayToSort[j];
+                        arrayToSort[j] = temp;
                     }
                 }
             }
-            return inputArray;
+            // Calculating delta.
+            TimeSpan timeDelta = DateTime.Now - timeStart;
+            // Returns Elapsed time in Milliseconds;
+            sortingTimeMs = timeDelta.TotalMilliseconds;
+            //Retuns sorted array
+            return arrayToSort;
+        }
+
+        internal static int[] Sort(int[] numbers)
+        {
+            throw new NotImplementedException();
         }
     }
 }
