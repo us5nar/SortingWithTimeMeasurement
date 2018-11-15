@@ -1,7 +1,6 @@
-﻿using InsertionSorterNaneSpace;
-using System;
+﻿using System;
 
-namespace CommonInsertion_Sort
+namespace BubbleSorterNameSpace
 {
     class Program
     {
@@ -13,7 +12,7 @@ namespace CommonInsertion_Sort
             PrintIntegerArray(numbers);
             Console.WriteLine("\nSorted Array Elements :");
             PrintIntegerArray(sorter.Sort(numbers, out double timer));
-            Console.WriteLine("\nTme elapsed {0} ms.",timer);
+            Console.WriteLine("\nTme elapsed {0} ms.", timer);
             Console.WriteLine("\nPress ENTER to exit");
             Console.ReadLine();
         }

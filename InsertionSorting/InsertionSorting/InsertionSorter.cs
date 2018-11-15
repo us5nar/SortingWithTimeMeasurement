@@ -1,9 +1,8 @@
 ﻿using System;
 using ISorterNameSpace;
-
-namespace InsertionSorterNaneSpace
+namespace InsertionSorting
 {
-    internal class InsertionSorter:ISorter
+    public class InsertionSorter:ISorter
     {
          public int[] Sort(int[] arrayToSort, out double sortingTimeMs)
         {
@@ -27,11 +26,6 @@ namespace InsertionSorterNaneSpace
             sortingTimeMs = timeDelta.TotalMilliseconds;
             //Retuns sorted array
             return arrayToSort;
-        }
-
-        internal static int[] Sort(int[] numbers)
-        {
-            throw new NotImplementedException();
         }
     }
 }
