@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5C18676F-024C-49DD-B737-134E27D4DDF7}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>DefaultSorter</RootNamespace>
-    <AssemblyName>DefaultSorter</AssemblyName>
+    <ProjectGuid>{569F7AE5-72E5-4F07-AEF5-1A8F77D4D106}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DefaultSorting</RootNamespace>
+    <AssemblyName>DefaultSorting</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,10 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ISorter">
+      <HintPath>..\..\SortingWithTimeMeasurement\ISorter\obj\Debug\ISorter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,16 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefaultSorter.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ISorter\ISorter.csproj">
-      <Project>{729ad809-6622-45ee-961b-f5e38cacd05a}</Project>
-      <Name>ISorter</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
