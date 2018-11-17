@@ -7,10 +7,13 @@ namespace ArrayGeneratorSpace
         public static int[,] GetRandomArray(int arraySizeX, int arraySizeY)
         {
             int[,] arrayToFill = new int[arraySizeX,arraySizeY];
-            //foreach (int value in arrayToFill)
-            for (int indexX = 0, indexY = 0; indexX < arraySizeX, indexY < arraySizeY ; indexX++, indexY++)
+            //for each position in array generate a rendom value
+            for (int indexX = 0; indexX < arraySizeX; indexX++)
             {
-                arrayToFill[index] = randomizer.Next(-1000, 1000);
+                for (int indexY = 0; indexY < arraySizeY; indexY++)
+                {
+                    arrayToFill[indexX, indexY] = randomizer.Next(-1000, 1000);
+                }
             }
             return arrayToFill;
         }
