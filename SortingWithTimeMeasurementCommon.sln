@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayWriter", "WriteArray\A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayGenerator", "ArrayGenerator\ArrayGenerator.csproj", "{70048D8D-6831-4329-AB72-EAF1485AF16F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginsLoad", "PluginsLoad\PluginsLoad.csproj", "{01850BDA-1BF8-4641-A4D3-94AE19EE44AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{70048D8D-6831-4329-AB72-EAF1485AF16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70048D8D-6831-4329-AB72-EAF1485AF16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70048D8D-6831-4329-AB72-EAF1485AF16F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01850BDA-1BF8-4641-A4D3-94AE19EE44AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01850BDA-1BF8-4641-A4D3-94AE19EE44AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01850BDA-1BF8-4641-A4D3-94AE19EE44AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01850BDA-1BF8-4641-A4D3-94AE19EE44AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

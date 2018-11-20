@@ -3,14 +3,14 @@ using LogWriterNameSpace;
 using ArrayGeneratorSpace;
 
 
-namespace SortingWithTimeMeasurement
+namespace SortingWithTimeMeasurementCommon
 {
     class Program
     {
         static void Main(string[] args)
         {
             //LogWriter logWriter = new LogWriter();
-            int[] unsortedArray = ArrayGenerator.GetRandomArray(200);
+            int[,] unsortedArray = ArrayGenerator.GetRandomArray(20,20);
             //An exapmple of log writer usage
             //-----------I want to try it as a static-------------
             LogWriter.Write("====================!!!START!!!=======================");
