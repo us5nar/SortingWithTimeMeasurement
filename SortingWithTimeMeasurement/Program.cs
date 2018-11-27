@@ -1,6 +1,6 @@
 ﻿using System;
-using LogWriterNameSpace;
-using ArrayGeneratorSpace;
+using Tools;
+using CommonNameSpace;
 
 
 namespace SortingWithTimeMeasurementCommon
