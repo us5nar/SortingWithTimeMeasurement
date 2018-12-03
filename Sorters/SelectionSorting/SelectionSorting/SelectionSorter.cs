@@ -1,5 +1,6 @@
 ﻿using System;
 using CommonNameSpace;
+using Tools;
 
 namespace SelectionSorting
 {
@@ -9,16 +10,21 @@ namespace SelectionSorting
         {
             // Init Stopwatch.
             DateTime timeStart = DateTime.Now;
+            Tools.
+            int lengthA = arrayToSort.GetLength(0);
+            int lengthB = arrayToSort.GetLength(1);
+            int[] temporaryArray = Arr.ConvertTo1D(arrayToSort);
 
             // Init Variables.
             int maxElementPositionInRow = arrayToSort.GetLength(0) - 1;
             int maxElementPositionInColumn = arrayToSort.GetLength(1) - 1; // with respect to 0.
             int element2Swap = 0;
             int temporaryArraySize = arrayToSort.GetLength(0) * arrayToSort.GetLength(1);
-            int[] temporaryArray = new int[temporaryArraySize];
-            int position = 0;
+            //int[] temporaryArray = new int[temporaryArraySize];
+
 
             // copy 2d array to 1d accumiulator
+            int position = 0;
             foreach (int element in arrayToSort)
                 {temporaryArray[position++] = element;}
 
