@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingWithTimeMeasurementMain", "SortingWithTimeMeasurement\SortingWithTimeMeasurementMain.csproj", "{415604C5-15AF-4304-83A7-48C307D883EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary_TEMP", "ClassLibrary_TEMP\ClassLibrary_TEMP.csproj", "{14916404-3D4D-4A7B-A78A-B100E94DF318}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortersCommon", "SortersCommon\SortersCommon.csproj", "{A8D7EE3C-AF89-455E-80EE-36E8F7C0E822}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortersTools", "SortersTools\SortersTools.csproj", "{55D770AE-D9F5-4DE5-AA67-45E248A45449}"
@@ -21,10 +19,6 @@ Global
 		{415604C5-15AF-4304-83A7-48C307D883EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{415604C5-15AF-4304-83A7-48C307D883EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{415604C5-15AF-4304-83A7-48C307D883EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14916404-3D4D-4A7B-A78A-B100E94DF318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14916404-3D4D-4A7B-A78A-B100E94DF318}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14916404-3D4D-4A7B-A78A-B100E94DF318}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14916404-3D4D-4A7B-A78A-B100E94DF318}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A8D7EE3C-AF89-455E-80EE-36E8F7C0E822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8D7EE3C-AF89-455E-80EE-36E8F7C0E822}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8D7EE3C-AF89-455E-80EE-36E8F7C0E822}.Release|Any CPU.ActiveCfg = Release|Any CPU

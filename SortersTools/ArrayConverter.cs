@@ -6,7 +6,7 @@
         {   // copy 2d array to 1d accumiulator
             int lengthA = input2dArray.GetLength(0);// - 1;
             int LengthB = input2dArray.GetLength(1);// - 1;
-            int[] tempArray = new int[lengthA*LengthB];
+            int[] tempArray = new int[lengthA * LengthB];
             int position = 0;
             foreach (int element in input2dArray)
             {
@@ -27,8 +27,5 @@
             }
             return tempArray;
         }
-        
-
-
-}
+    }
 }
