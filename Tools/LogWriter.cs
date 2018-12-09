@@ -13,14 +13,20 @@ namespace Tools
         //Appends log string with DayTime stamp
         public static void Write(string logMessage)           
         {            
-            try
-            {
+            //try
+            //{
                 File.AppendAllText(currenExePath + "\\" + "logFile.log", timeStamp + logMessage + "\n\t");
-            }
-            catch (Exception ex)
-            {
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //}
         }
+        public static void WriteArray(int[,] arrayToWrite,string arrayCaption)
+        {
+            Write("Dump of array" + arrayCaption);
+
+        }
+
 
     }
 }

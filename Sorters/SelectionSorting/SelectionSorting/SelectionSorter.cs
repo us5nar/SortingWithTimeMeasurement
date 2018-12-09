@@ -10,7 +10,7 @@ namespace SelectionSorting
         {
             // Init Stopwatch.
             DateTime timeStart = DateTime.Now;
-            Tools.
+            a
             int lengthA = arrayToSort.GetLength(0);
             int lengthB = arrayToSort.GetLength(1);
             int[] temporaryArray = Arr.ConvertTo1D(arrayToSort);

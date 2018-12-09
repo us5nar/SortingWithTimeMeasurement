@@ -1,6 +1,6 @@
 ﻿using System;
 using Tools;
-using CommonNameSpace;
+//using CommonNameSpace;
 
 
 namespace SortingWithTimeMeasurementCommon
@@ -15,6 +15,8 @@ namespace SortingWithTimeMeasurementCommon
             //-----------I want to try it as a static-------------
             LogWriter.Write("====================!!!START!!!=======================");
             string lineForOutput="";
+            LogWriter.WriteArray(unsortedArray,"Input array");
+            
             foreach (int element in unsortedArray)
             {
                 lineForOutput += String.Format("{0}\t", element.ToString());
