@@ -1,32 +1,17 @@
-﻿using System;
+﻿using SortersTools;
+using System;
 
-namespace BubbleSorterNameSpace
+namespace BubbleSorter
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int[] numbers = new int[] { 2, 5, -4, 11, 0, 18, 22, 67, 51, 6, 88, -100, 3 };
-            InsertionSorter sorter = new InsertionSorter();
-            Console.WriteLine("\nOriginal Array Elements :");
-            PrintIntegerArray(numbers);
-            Console.WriteLine("\nSorted Array Elements :");
-            PrintIntegerArray(sorter.Sort(numbers, out double timer));
-            Console.WriteLine("\nTme elapsed {0} ms.", timer);
-            Console.WriteLine("\nPress ENTER to exit");
+            int[,] numbers = ArrayGenerator.GetRandomArray(10, 10);
+            BubbleSorter sorter = new BubbleSorter();
+            ArrayWriter.WriteArray(numbers, "Original Array");
+            ArrayWriter.WriteArray(sorter.Sort(numbers, out double timer), "Sorted Array with time " + timer);
             Console.ReadLine();
         }
-
-        public static void PrintIntegerArray(int[] array)
-        {
-            Console.Write("[ ");
-            foreach (int i in array)
-            {
-                Console.Write(i.ToString() + "  ");
-            }
-            Console.WriteLine("]");
-        }
-
-
     }
 }

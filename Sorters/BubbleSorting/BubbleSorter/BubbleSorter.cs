@@ -1,16 +1,20 @@
-﻿using System;
-using ISorterNameSpace;
-namespace BubbleSorterNameSpace
+﻿using SortersCommon;
+using SortersTools;
+using System;
+
+namespace BubbleSorter
 {
-    internal class InsertionSorter : ISorter
+    internal class BubbleSorter : ISorter
     {
-        public int[] Sort(int[] arrayToSort, out double sortingTimeMs)
+        public int[,] Sort(int[,] inputArray, out double sortingTimeMs)
         {
             // Bobble sorting method for interger array
             // Begin timing.
             DateTime timeStart = DateTime.Now;
-            //Init:
-            //Condition
+            //Convert arrayToSort to 1d array
+            int[] arrayToSort = ArrayConverter.ConvertTo1D(inputArray);
+
+            //Precondition
             bool elementsWereSwapped = true;
             //Array Size
             int arraySize = arrayToSort.Length - 1;
@@ -28,7 +32,7 @@ namespace BubbleSorterNameSpace
 
                         elementsWereSwapped = true;
                     }
-                    
+
                 }
             }
 
@@ -38,7 +42,7 @@ namespace BubbleSorterNameSpace
             sortingTimeMs = timeDelta.TotalMilliseconds;
 
             //Retuns sorted array
-            return arrayToSort;
+            return ArrayConverter.ConvertTo2D(arrayToSort, inputArray.GetLength(0), inputArray.GetLength(1));
         }
 
     }

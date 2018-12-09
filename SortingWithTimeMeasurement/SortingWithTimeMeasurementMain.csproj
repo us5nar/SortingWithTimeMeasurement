@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SortersTools">
+      <HintPath>..\SortersTools\bin\Release\SortersTools.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,10 +57,6 @@
     <ProjectReference Include="..\SortersCommon\SortersCommon.csproj">
       <Project>{a8d7ee3c-af89-455e-80ee-36e8f7c0e822}</Project>
       <Name>SortersCommon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SortersTools\SortersTools.csproj">
-      <Project>{55d770ae-d9f5-4de5-aa67-45e248a45449}</Project>
-      <Name>SortersTools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

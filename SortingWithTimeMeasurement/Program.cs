@@ -11,7 +11,7 @@ namespace SortingWithTimeMeasurementCommon
         {
             //TBD Generate a new array
             //AI - add input from keyboard
-            int[,] unsortedArray = ArrayGenerator.GetRandomArray(20, 20);
+            int[,] unsortedArray = ArrayGenerator.GetRandomArray(10, 10);
 
             //An exapmple of log writer usage
             LogWriter.Write("====================!!!START!!!=======================");
@@ -19,20 +19,9 @@ namespace SortingWithTimeMeasurementCommon
             //Check array output to log
             LogWriter.WriteArray(unsortedArray, "Input array");
 
-            //Ceck Array printing
+            //Ceck Array printing           
+            ArrayWriter.WriteArray(unsortedArray, "Input array");
 
-            //ArrayWriter
-            //SortersTools.ArrayWriter
-
-
-            string lineForOutput = "";
-            foreach (int element in unsortedArray)
-            {
-                lineForOutput += String.Format("{0}\t", element.ToString());
-            }
-            lineForOutput += "\n\r";
-            LogWriter.Write(lineForOutput);
-            Console.Write(lineForOutput);
             LogWriter.Write("====================!!!STOP!!!=======================");
 
             Console.ReadLine();

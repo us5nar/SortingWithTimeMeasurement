@@ -1,6 +1,6 @@
 ﻿namespace SortersTools
 {
-    class ArrayConverter
+    public class ArrayConverter
     {
         public static int[] ConvertTo1D(int[,] input2dArray)
         {   // copy 2d array to 1d accumiulator

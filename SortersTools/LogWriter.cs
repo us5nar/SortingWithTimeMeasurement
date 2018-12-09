@@ -25,7 +25,7 @@ namespace SortersTools
         {
             int arraySizeA = arrayToWrite.GetLength(0);
             int arraySizeB = arrayToWrite.GetLength(1);
-            Write("Dump of array" + arrayCaption);
+            Write("Dumping " + arrayCaption);
             Write("Size:" + arraySizeA + "x" + arraySizeB + "\n");
             for (int column = 0; column < arraySizeA; column++)
             {
@@ -35,9 +35,8 @@ namespace SortersTools
                     rowToWrite += String.Format("{0}\t", arrayToWrite[row, column].ToString());
                 }
                 File.AppendAllText(currenExePath + "\\" + "logFile.log", rowToWrite + "\n\r");
-                Write("==================End Of Dump========================");
             }
+            Write("==================End Of Dump========================");
         }
     }
 }
-
