@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{415604C5-15AF-4304-83A7-48C307D883EE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>SortingWithTimeMeasurement</RootNamespace>
-    <AssemblyName>SortingWithTimeMeasurement</AssemblyName>
+    <ProjectGuid>{A8D7EE3C-AF89-455E-80EE-36E8F7C0E822}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SortersCommon</RootNamespace>
+    <AssemblyName>SortersCommon</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,22 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PluginsLoader.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ISorter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SortersCommon\SortersCommon.csproj">
-      <Project>{a8d7ee3c-af89-455e-80ee-36e8f7c0e822}</Project>
-      <Name>SortersCommon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SortersTools\SortersTools.csproj">
-      <Project>{55d770ae-d9f5-4de5-aa67-45e248a45449}</Project>
-      <Name>SortersTools</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

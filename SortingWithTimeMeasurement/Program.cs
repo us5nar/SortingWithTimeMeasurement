@@ -1,5 +1,5 @@
-﻿using System;
-using Tools;
+﻿using SortersTools;
+using System;
 //using CommonNameSpace;
 
 
@@ -9,14 +9,23 @@ namespace SortingWithTimeMeasurementCommon
     {
         static void Main(string[] args)
         {
-            //LogWriter logWriter = new LogWriter();
-            int[,] unsortedArray = ArrayGenerator.GetRandomArray(20,20);
+            //TBD Generate a new array
+            //AI - add input from keyboard
+            int[,] unsortedArray = ArrayGenerator.GetRandomArray(20, 20);
+
             //An exapmple of log writer usage
-            //-----------I want to try it as a static-------------
             LogWriter.Write("====================!!!START!!!=======================");
-            string lineForOutput="";
-            LogWriter.WriteArray(unsortedArray,"Input array");
-            
+
+            //Check array output to log
+            LogWriter.WriteArray(unsortedArray, "Input array");
+
+            //Ceck Array printing
+
+            //ArrayWriter
+            //SortersTools.ArrayWriter
+
+
+            string lineForOutput = "";
             foreach (int element in unsortedArray)
             {
                 lineForOutput += String.Format("{0}\t", element.ToString());
