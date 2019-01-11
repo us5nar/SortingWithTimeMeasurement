@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using SortersCommon;
+using SortersTools;
 
 namespace PluginsLoader
 {
     public class PluginsLoader
-    {
-        
+    {      
         public static List<ISorter> LoadSortersFromDLLs()
         {
             string[] files = Directory.GetFiles("Plugins/", "*.dll");
@@ -16,9 +16,9 @@ namespace PluginsLoader
             foreach (string dllFile in files)
             {
                 assamblies.Add(Assembly.LoadFile(dllFile));
+                LogWriter.Write(dllFile);
             }
             List<ISorter> sorters = new List<ISorter>();
-
             foreach(Assembly assembly in assamblies)
             {
                 Type[] types = assembly.GetTypes();
@@ -41,7 +41,6 @@ namespace PluginsLoader
                     }
                 }
             }
-
             return sorters;
         }
     }

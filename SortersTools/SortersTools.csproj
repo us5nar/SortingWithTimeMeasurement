@@ -45,6 +45,7 @@
     <Compile Include="ArrayGenerator.cs" />
     <Compile Include="ArrayWriter.cs" />
     <Compile Include="LogWriter.cs" />
+    <Compile Include="PathChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
