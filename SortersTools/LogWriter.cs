@@ -25,7 +25,7 @@ namespace SortersTools
         {
             int arraySizeA = arrayToWrite.GetLength(0);
             int arraySizeB = arrayToWrite.GetLength(1);
-            Write("Dumping " + arrayCaption);
+            Write("Dump of " + arrayCaption);
             Write("Size:" + arraySizeA + "x" + arraySizeB + "\n");
             for (int column = 0; column < arraySizeA; column++)
             {

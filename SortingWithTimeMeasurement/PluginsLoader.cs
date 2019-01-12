@@ -5,13 +5,14 @@ using System.Reflection;
 using SortersCommon;
 using SortersTools;
 
-namespace PluginsLoader
+//namespace PluginsLoader
+namespace SortingWithTimeMeasurementCommon
 {
     public class PluginsLoader
     {      
-        public static List<ISorter> LoadSortersFromDLLs()
+        public static List<ISorter> LoadSortersFromDLLs(string pathToSharedDLLs)
         {
-            string[] files = Directory.GetFiles("Plugins/", "*.dll");
+            string[] files = Directory.GetFiles(pathToSharedDLLs, "*.dll");
             List<Assembly> assamblies = new List<Assembly>();
             foreach (string dllFile in files)
             {
