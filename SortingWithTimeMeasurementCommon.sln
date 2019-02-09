@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortersCommon", "SortersCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortersTools", "SortersTools\SortersTools.csproj", "{55D770AE-D9F5-4DE5-AA67-45E248A45449}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridApplication", "DataGridApplication\DataGridApplication.csproj", "{289C302B-DB7B-4C96-A76D-8102D767CB46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{55D770AE-D9F5-4DE5-AA67-45E248A45449}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55D770AE-D9F5-4DE5-AA67-45E248A45449}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55D770AE-D9F5-4DE5-AA67-45E248A45449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{289C302B-DB7B-4C96-A76D-8102D767CB46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{289C302B-DB7B-4C96-A76D-8102D767CB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{289C302B-DB7B-4C96-A76D-8102D767CB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{289C302B-DB7B-4C96-A76D-8102D767CB46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
